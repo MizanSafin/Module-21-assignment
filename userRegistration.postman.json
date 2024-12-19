@@ -1,0 +1,218 @@
+{
+	"info": {
+		"_postman_id": "a542b6aa-a129-4a14-b8f0-64c24c423d57",
+		"name": "userRegistration",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24876421"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"Demo 3\",\r\n      \"lastName\":\"name\",\r\n      \"NIDNumber\":\"1234567890010017\",\r\n      \"phoneNumber\":\"019406860687\",\r\n      \"password\":\"24726\",\r\n      \"bloodGroup\":\"B+ve\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5056/api/auth/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"phoneNumber\":\"019406860689\",\r\n      \"password\":\"247260\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5056/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjAxOTQwNjg2MDY4MCIsInVzZXJfaWQiOiI2NzYzZmNhMzhiYzExMjE1ZTRmYmZiOWIiLCJpYXQiOjE3MzQ2MDY4NTAsImV4cCI6MTczNzE5ODg1MH0.9N6j10bOwAD1DCYb3NqA098s7BAALkbUNCcBQwvqS-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"phoneNumber\":\"019406860680\",\r\n      \"password\":\"24726\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5056/api/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjAxOTQwNjg2MDY4MCIsInVzZXJfaWQiOiI2NzYzZmNhMzhiYzExMjE1ZTRmYmZiOWIiLCJpYXQiOjE3MzQ2MDY4NTAsImV4cCI6MTczNzE5ODg1MH0.9N6j10bOwAD1DCYb3NqA098s7BAALkbUNCcBQwvqS-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"firstName\":\"Md.Sadman\",\r\n      \"lastName\":\"safin\",\r\n      \"NIDNumber\":\"1234567890010010\",\r\n      \"phoneNumber\":\"019406860680\",\r\n      \"password\":\"24726\",\r\n      \"bloodGroup\":\"B+ve\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5056/api/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjAxOTQwNjg2MDY4OSIsInVzZXJfaWQiOiI2NzY0MTA4ZDBjYTRhMmJhODkxNzcwMTciLCJpYXQiOjE3MzQ2MTExNTksImV4cCI6MTczNzIwMzE1OX0.eT-I7LlKm4HPjWvp3_BlXhoxFh7HlBnga2zKtvkRqsg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5056/api/auth/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwaG9uZU51bWJlciI6IjAxOTQwNjg2MDY4MCIsInVzZXJfaWQiOiI2NzYzZmNhMzhiYzExMjE1ZTRmYmZiOWIiLCJpYXQiOjE3MzQ2MDY4NTAsImV4cCI6MTczNzE5ODg1MH0.9N6j10bOwAD1DCYb3NqA098s7BAALkbUNCcBQwvqS-8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5056/api/auth/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5056",
+					"path": [
+						"api",
+						"auth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
